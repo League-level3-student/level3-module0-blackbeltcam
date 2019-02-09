@@ -24,7 +24,7 @@ public class Firework{
 		//3. Iterate through the sparks and initialize each one to a new Spark.
 		//   Make each spark start at the middle bottom of the screen.
 	for (int ree=0;ree<sparks.length;ree++) {
-		sparks[ree] = new Spark(100, 480);
+		sparks[ree] = new Spark(950, 1000);
 	}
 	}
 	
@@ -32,8 +32,8 @@ public class Firework{
 		//4. Iterate through the sparks and reset their x and y location
 		//   to their original starting point.
 		for (int yesnt=0;yesnt<sparks.length;yesnt++) {
-			sparks[yesnt].x=100;
-			sparks[yesnt].y=480;
+			sparks[yesnt].x=930;
+			sparks[yesnt].y=1000;
 		}
 	}
 	
@@ -71,6 +71,10 @@ public class Firework{
 	
 	public void drawSparks(Graphics g) {
 		//5. Iterate through each spark
+		for (int uncan=0;uncan<sparks.length;uncan++) {
+			g.setColor(sparks[uncan].color);
+			g.fillOval(sparks[uncan].x, sparks[uncan].y, sparks[uncan].size, sparks[uncan].size);
+		}
 			//6. Set the color to the spark's color with g.setColor()
 			//7. Fill in an oval using the spark's x, y, and size with g.fillOval()
 	}
